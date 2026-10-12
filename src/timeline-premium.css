@@ -1,0 +1,22 @@
+.universe { position: relative; overflow: hidden; }
+.universe::before, .universe::after { color: #d87696; font-size: 31px; opacity: .3; position: absolute; }
+.universe::before { content: '✦'; left: 7%; top: 23%; }
+.universe::after { content: '♡'; right: 8%; top: 52%; font-size: 44px; }
+.timeline { padding: 19px 0 0; }
+.timeline::before { background: linear-gradient(180deg, transparent, #df99ad 6%, #cca6d6 50%, #df99ad 94%, transparent); box-shadow: 0 0 9px #e09ab280; }
+.memory { padding-bottom: 52px; }
+.memory-dot { width: 45px; height: 45px; left: -4px; top: 26px; background: linear-gradient(145deg, #c83361, #841137); border: 4px solid #fff7f6; box-shadow: 0 0 0 7px #fbe5e9, 0 10px 18px #81214235; }
+.memory-dot::before, .memory-dot::after { content: ''; position: absolute; width: 3px; height: 3px; border-radius: 50%; background: #fff; opacity: .8; }
+.memory-dot::before { left: 8px; top: 9px; }.memory-dot::after { right: 8px; bottom: 9px; }
+.memory-card { align-items: stretch; min-height: 153px; padding: 13px; border: 1px solid #efcfd7; border-radius: 24px; background: linear-gradient(125deg, #fffdfd, #fff6f8 62%, #f8edf9); box-shadow: 0 18px 36px #8b244416, inset 0 1px #fff; }
+.memory-card::before { content: ''; position: absolute; inset: 0; border-radius: inherit; background: radial-gradient(circle at 92% 8%, #f8cdd855, transparent 21%); pointer-events: none; }
+.memory-card::after { color: #eaa8ba; font-size: 19px; right: 21px; top: 17px; }
+.memory-card:hover { transform: translateX(7px) translateY(-4px) rotate(-.15deg); box-shadow: 0 25px 45px #8b244425, inset 0 1px #fff; }
+.memory-image { width: 128px; height: 126px; min-width: 128px; overflow: hidden; position: relative; background: linear-gradient(145deg, #f8dbe4, #dfd3ed); box-shadow: inset 0 0 0 1px #fff9, 0 8px 18px #b66c8420; }
+.memory-image::before { content: ''; position: absolute; width: 110px; height: 110px; border-radius: 50%; background: #fff6; top: -51px; right: -38px; }
+.memory-image > span { z-index: 1; }.memory-image small { bottom: 11px; color: #8c4560; font-size: 8px; font-weight: 700; letter-spacing: .14em; position: absolute; text-transform: uppercase; }
+.memory-copy { align-self: center; padding: 6px 24px 6px 5px; }.memory-copy h3 { font-size: 27px; }.memory-copy .date { margin-bottom: 5px; }
+.memory-whisper { align-items: center; color: #b4778c; display: flex; font-family: 'Great Vibes', cursive; font-size: 20px; gap: 5px; margin-top: 11px; }.memory-whisper svg { color: #c94a70; }
+.memory-2 .memory-image { background: linear-gradient(145deg, #f4d7ed, #d8d4f0); }.memory-3 .memory-image { background: linear-gradient(145deg, #fce2d0, #efd2df); }.memory-2 .memory-card { margin-left: 14px; }
+.card-sparkle { color: #e6a0b3; font-size: 15px; position: absolute; right: 18px; bottom: 14px; }
+@media (max-width: 700px) { .memory { padding-left: 54px; padding-bottom: 27px; }.memory-dot { left: -4px; top: 19px; width: 39px; height: 39px; }.memory-card { border-radius: 19px; padding: 10px; }.memory-image { min-width: 84px; width: 84px; height: 105px; font-size: 32px; }.memory-image small { font-size: 6px; bottom: 8px; }.memory-copy { padding: 3px 8px 3px 0; }.memory-copy h3 { font-size: 20px; }.memory-copy .date { font-size: 8px !important; }.memory-copy p { font-size: 12px !important; }.memory-whisper { display: none; }.memory-2 .memory-card { margin-left: 0; } }

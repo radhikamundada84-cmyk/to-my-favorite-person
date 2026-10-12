@@ -1,0 +1,110 @@
+.gallery { grid-auto-rows: 225px; }
+
+.gallery-card {
+  border: 8px solid #fffdf9;
+  border-radius: 17px;
+  box-shadow: 0 12px 27px #741d381c;
+  isolation: isolate;
+}
+
+.gallery-card::after {
+  border: 1px solid #ffffff85;
+  border-radius: 10px;
+  content: '';
+  inset: 6px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 3;
+}
+
+.gallery-photo {
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  position: absolute;
+  transition: transform .65s ease;
+  width: 100%;
+}
+
+.gallery-card:hover .gallery-photo { transform: scale(1.08); }
+.gallery-card:hover { transform: rotate(-1deg) translateY(-6px); }
+
+.photo-wash {
+  background: linear-gradient(0deg, #350514c9 0%, #35051418 57%, transparent 100%);
+  inset: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.gallery-title {
+  bottom: 17px;
+  color: #fff;
+  font-size: 19px;
+  left: 17px;
+  max-width: 76%;
+  text-align: left;
+  text-shadow: 0 2px 9px #350514b8;
+  z-index: 2;
+}
+
+.view-memory {
+  color: #fff;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  opacity: 0;
+  position: absolute;
+  right: 16px;
+  text-transform: uppercase;
+  top: 16px;
+  transition: opacity .25s;
+  z-index: 4;
+}
+
+.gallery-card:hover .view-memory { opacity: 1; }
+.tape { z-index: 4; }
+
+.gallery-card.g0 { grid-row: span 2; }
+.gallery-card.g1 { grid-column: span 2; }
+.gallery-card.g2 { grid-row: span 2; }
+.gallery-card.g3 { grid-row: span 1; }
+.gallery-card.g4 { grid-column: span 2; }
+.gallery-card.g5 { grid-row: span 1; }
+
+.gallery-card.g0 .gallery-photo { object-position: 57% 48%; }
+.gallery-card.g2 .gallery-photo { object-position: 50% 52%; }
+.gallery-card.g3 .gallery-photo { object-position: 50% 50%; }
+.gallery-card.g4 .gallery-photo { object-position: 50% 50%; }
+
+.modal-photo {
+  background: #30101d;
+  display: block;
+  font-size: unset;
+  max-height: 65vh;
+  object-fit: contain;
+}
+
+.music-note {
+  background: #fffdf9;
+  border: 1px solid #efcfd7;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px #741d3820;
+  color: #66112f;
+  font-size: 11px;
+  line-height: 1.5;
+  max-width: 245px;
+  padding: 10px 13px;
+  position: fixed;
+  right: 18px;
+  top: 64px;
+  z-index: 21;
+}
+
+.music-note code { font-size: 10px; }
+
+@media (max-width: 700px) {
+  .gallery { grid-auto-rows: 180px; }
+  .gallery-card.g0, .gallery-card.g1, .gallery-card.g2, .gallery-card.g3, .gallery-card.g4, .gallery-card.g5 { grid-column: span 1; grid-row: span 1; }
+  .gallery-card { border-width: 5px; }
+  .gallery-title { bottom: 11px; font-size: 15px; left: 11px; }
+}

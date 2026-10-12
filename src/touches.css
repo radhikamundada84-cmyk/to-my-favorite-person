@@ -1,0 +1,63 @@
+/* Storybook details for the memories that started it all. */
+.memory-dot {
+  box-shadow: 0 0 0 7px var(--blush), 0 7px 14px #8c1c4030;
+}
+
+.memory-card {
+  background: linear-gradient(115deg, #ffffffed, #fff8fa99);
+  position: relative;
+  overflow: hidden;
+}
+
+.memory-card::after {
+  content: "♥";
+  position: absolute;
+  right: 18px;
+  top: 13px;
+  color: #f3d5dd;
+  font-size: 14px;
+}
+
+.memory-card:hover {
+  transform: translateX(5px) translateY(-2px);
+  box-shadow: 0 20px 35px #74234418;
+}
+
+.memory-image {
+  box-shadow: inset 0 0 0 1px #fff8;
+}
+
+.memory-card p {
+  color: #6a2940;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* The reason cards expand slightly to make longer heartfelt notes comfortable to read. */
+.flip {
+  height: 225px;
+}
+
+.flip-back {
+  font-size: 14px;
+  line-height: 1.5;
+  overflow: auto;
+  padding: 20px;
+}
+
+@media (max-width: 700px) {
+  .flip { height: 205px; }
+  .flip-back { font-size: 12px; padding: 16px; }
+}
+
+.love-letter blockquote p {
+  margin: 0 0 19px;
+}
+
+.love-letter blockquote p:last-child {
+  margin-bottom: 0;
+  color: var(--cherry);
+  font-weight: 700;
+  letter-spacing: .04em;
+}
